@@ -3,63 +3,46 @@
 <head>
   <meta charset="UTF-8">
   <title>Benim Hack Sayfam</title>
-  <link rel="stylesheet" href="style.css"> 
-  <style>
-    body { background-color: black; 
-          color: white; 
-          font-family: Arial, sans-serif;
-          margin: 0;
-          padding: 20px }
-    .header { text-align: center;
-           padding: 20px;
-           background-color: #333; }
-    .content { max-width: 800px; 
-            margin: 20px auto; }
-    .photo { display: block; /* Üst üste */ 
-          marginf: 10px auto; /* Oratala */
-          border: 2px solid white;
-          max-width 300px; /* Official look */}
-    .login-form, register-form { 
-      margin: 20px 0;
-      padding: 15px;
-      background-color: #666;
-      color: white;
-      border: none;}
-    .login-form input, register-form input { 
-      margin: 5px 0;
-      padding: 5px;
-      background-color: #666;
-      color: white;
-      border: none;}
-    .login-form button, register-form button { 
-      padding: 5px 10px;
-      background-color: #008000;
-      color: white;
-      border: none;
-      cursor: pointer; }
-    .code {
-      background-color: #222;
-      padding: 10px;
-      border-radius: 3px;
-      font-family: monospace; } 
-    </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Merhaba Dünya!</h1>
-  <p>TryHackMe Section 3 bitti, şimdi GitHub'dayım.</p>
-  <img src="foto1" alt="foto1" width="200">
-  <img src="foto2" alt="foto2" width="200">
-  <img src="box.jpg" alt="box.jpg" width="200">
-    <style>
-      img { display: block; /* Üst üste gelsin */
-             margin: 10px auto; /* Ortala ve boşluk bırak */
-             border: 2px solid white; /* Çerçeve */ } 
-    </style>
+  <div class="header">
+    <h1>Merhaba Dünya!</h1>
+    <p>TryHackMe Section 3 bitti, şimdi GitHub'dayım.</p>
+  </div>
+
+  <div class="content">
+    <!-- Fotoğraflar -->
+    <img src="images/foto1.jpg" alt="Foto 1" class="photo">
+    <img src="images/foto2.jpg" alt="Foto 2" class="photo">
+    <img src="images/box.jpg" alt="Box" class="photo">
+
+    <!-- Login Formu -->
+    <div class="login-form">
+      <h2>Giriş Yap</h2>
+      <form>
+        <input type="text" placeholder="Kullanıcı Adı" required>
+        <input type="password" placeholder="Şifre" required>
+        <button type="submit">Giriş</button>
+      </form>
+    </div>
+
+    <!-- Sign Up Formu -->
+    <div class="register-form">
+      <h2>Kayıt Ol</h2>
+      <form>
+        <input type="text" placeholder="Kullanıcı Adı" required>
+        <input type="email" placeholder="E-posta" required>
+        <input type="password" placeholder="Şifre" required>
+        <button type="submit">Kayıt Ol</button>
+      </form>
+    </div>
+  </div>
+
   <script>
     alert("Hoş geldin, hacker!");
-  </script> 
+  </script>
 </body>
 </html>
-
 
     <h1  { } 
