@@ -16,6 +16,15 @@ body {
 .header h1 {
   margin: 0;
   font-size: 2em;
+  animation: typing 3s steps(30, end);
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid white;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
 }
 
 .header p {
@@ -27,12 +36,21 @@ body {
   margin: 20px auto;
 }
 
+.gallery {
+  text-align: center;
+}
+
 .photo {
-  display: block;
-  margin: 15px auto;
+  display: inline-block;
+  margin: 10px;
   border: 2px solid white;
-  max-width: 300px;
+  max-width: 200px;
   height: auto;
+  transition: transform 0.3s;
+}
+
+.photo:hover {
+  transform: scale(1.1);
 }
 
 .login-form, .register-form {
@@ -78,9 +96,55 @@ body {
   background-color: #006600;
 }
 
+nav ul {
+  list-style: none;
+  padding: 10px 0;
+  text-align: center;
+  background-color: #222;
+  margin: 0;
+  border-radius: 5px;
+}
+
+nav ul li {
+  display: inline;
+  margin: 0 15px;
+}
+
+nav ul li a {
+  color: #008000;
+  text-decoration: none;
+  font-size: 1.1em;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
 .code {
   background-color: #222;
   padding: 10px;
   border-radius: 3px;
   font-family: monospace;
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 600px) {
+  .content {
+    padding: 10px;
+  }
+  .photo {
+    max-width: 100%;
+    margin: 5px auto;
+    display: block;
+  }
+  .login-form, .register-form {
+    padding: 10px;
+  }
+  .header h1 {
+    font-size: 1.5em;
+  }
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
 }
