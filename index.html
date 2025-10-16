@@ -2,25 +2,39 @@
 <html lang="tr">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Hacker temalı kişisel sitem">
   <title>Benim Hack Sayfam</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/favicon.ico">
 </head>
 <body>
+  <!-- Navigasyon Menüsü -->
+  <nav>
+    <ul>
+      <li><a href="#home">Ana Sayfa</a></li>
+      <li><a href="#login">Giriş</a></li>
+      <li><a href="#signup">Kayıt Ol</a></li>
+    </ul>
+  </nav>
+
   <div class="header">
     <h1>Merhaba Dünya!</h1>
     <p>TryHackMe Section 3 bitti, şimdi GitHub'dayım.</p>
   </div>
 
   <div class="content">
-    <!-- Fotoğraflar -->
-    <img src="foto1" alt="foto1" class="photo">
-    <img src="foto2" alt="foto2" class="photo">
-    <img src="box.jpg" alt="box.jpg" class="photo">
+    <!-- Fotoğraf Galerisi -->
+    <div class="gallery">
+      <img src="foto1" alt="foto1" class="photo">
+      <img src="foto2" alt="foto2" class="photo">
+      <img src="box.jpg" alt="box.jpg" class="photo">
+    </div>
 
     <!-- Login Formu -->
-    <div class="login-form">
+    <div class="login-form" id="login">
       <h2>Giriş Yap</h2>
-      <form>
+      <form id="loginForm">
         <input type="text" placeholder="Kullanıcı Adı" required>
         <input type="password" placeholder="Şifre" required>
         <button type="submit">Giriş</button>
@@ -28,9 +42,9 @@
     </div>
 
     <!-- Sign Up Formu -->
-    <div class="register-form">
+    <div class="register-form" id="signup">
       <h2>Kayıt Ol</h2>
-      <form>
+      <form id="registerForm">
         <input type="text" placeholder="Kullanıcı Adı" required>
         <input type="email" placeholder="E-posta" required>
         <input type="password" placeholder="Şifre" required>
@@ -40,9 +54,33 @@
   </div>
 
   <script>
+    // Hoş geldin alert
     alert("Hoş geldin, hacker!");
+
+    // Login formu için JavaScript
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const username = this.querySelector('input[type="text"]').value;
+      const password = this.querySelector('input[type="password"]').value;
+      if (!username || !password) {
+        alert('Lütfen tüm alanları doldurun!');
+      } else {
+        alert(Hoş geldin, ${username}!);
+      }
+    });
+
+    // Sign-up formu için JavaScript
+    document.getElementById('registerForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const username = this.querySelector('input[type="text"]').value;
+      const email = this.querySelector('input[type="email"]').value;
+      const password = this.querySelector('input[type="password"]').value;
+      if (!username  !email  !password) {
+        alert('Lütfen tüm alanları doldurun!');
+      } else {
+        alert(Kayıt başarılı, ${username}!);
+      }
+    });
   </script>
 </body>
 </html>
-
-    <h1  { } 
