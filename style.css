@@ -148,3 +148,18 @@ nav ul li a:hover {
     margin: 10px 0;
   }
 }
+.dark-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  background: #008000;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+body.light-mode {
+  background-color: #f0f0f0;
+  color: #000;
+}
