@@ -1,6 +1,9 @@
+// Dark Mode Toggle
 function toggleMode() {
   document.body.classList.toggle('light-mode');
 }
+
+// Matrix Efekti
 const canvas = document.getElementById('matrix');
 const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
@@ -9,6 +12,7 @@ const chars = '01ハックハックハック';
 const fontSize = 14;
 const columns = canvas.width / fontSize;
 const drops = Array(Math.floor(columns)).fill(1);
+
 function draw() {
   ctx.fillStyle = 'rgba(0,0,0,0.05)';
   ctx.fillRect(0, 0, canvas.width, canvas.height);
@@ -22,3 +26,37 @@ function draw() {
   });
 }
 setInterval(draw, 50);
+
+// Hoş geldin Alert
+alert("Hoş geldin, hacker!");
+
+// Login Formu
+document.getElementById('loginForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const username = this.querySelector('input[type="text"]').value;
+  const password = this.querySelector('input[type="password"]').value;
+  if (!username || !password) {
+    alert('Lütfen tüm alanları doldurun!');
+  } else {
+    alert(Hoş geldin, ${username}!);
+  }
+});
+
+// Sign-Up Formu
+document.getElementById('registerForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const username = this.querySelector('input[type="text"]').value;
+  const email = this.querySelector('input[type="email"]').value;
+  const password = this.querySelector('input[type="password"]').value;
+  if (!username  !email  !password) {
+    alert('Lütfen tüm alanları doldurun!');
+  } else {
+    alert(Kayıt başarılı, ${username}!);
+  }
+});
+
+// Pencere Boyutu Değişince Matrix Yenile
+window.addEventListener('resize', () => {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+});
