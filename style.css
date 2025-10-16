@@ -4,6 +4,27 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 20px;
+  transition: background-color 0.3s, color 0.3s; /* Light mode için yumuşak geçiş */
+}
+
+body.light-mode {
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+body.light-mode .header,
+body.light-mode .projects,
+body.light-mode .contact,
+body.light-mode .login-form,
+body.light-mode .register-form {
+  background-color: #ddd;
+  color: #000;
+}
+
+body.light-mode .login-form input,
+body.light-mode .register-form input {
+  background-color: #bbb;
+  color: #000;
 }
 
 .header {
@@ -127,6 +148,70 @@ nav ul li a:hover {
   font-family: monospace;
 }
 
+/* Projeler Stili */
+.projects {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #333;
+  border-radius: 5px;
+}
+
+.projects ul {
+  list-style: none;
+  padding: 0;
+}
+
+.projects li {
+  padding: 10px;
+  background: #444;
+  margin: 5px 0;
+  border-radius: 3px;
+}
+
+/* İletişim Stili */
+.contact {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #333;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.contact a {
+  color: #008000;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* Dark Toggle */
+.dark-toggle {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  background: #008000;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+/* Matrix */
+#matrix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.1;
+}
+
 /* Mobil Uyumluluk */
 @media (max-width: 600px) {
   .content {
@@ -147,44 +232,4 @@ nav ul li a:hover {
     display: block;
     margin: 10px 0;
   }
-}
-.dark-toggle {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  padding: 5px 10px;
-  background: #008000;
-  color: white;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-}
-body.light-mode {
-  background-color: #f0f0f0;
-  color: #000;
-}
-
-#matrix {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  opacity: 0.1;
-}
-
-.contact {
-  margin: 20px 0;
-  padding: 15px;
-  background-color: #333;
-  border-radius: 5px;
-  text-align: center;
-}
-.contact a {
-  color: #008000;
-  text-decoration: none;
-}
-.contact a:hover {
-  text-decoration: underline;
 }
