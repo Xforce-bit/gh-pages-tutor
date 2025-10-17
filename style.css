@@ -4,7 +4,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 20px;
-  transition: background-color 0.3s, color 0.3s; /* Light mode için yumuşak geçiş */
+  transition: background-color 0.3s, color 0.3s;
 }
 
 body.light-mode {
@@ -25,6 +25,14 @@ body.light-mode .login-form input,
 body.light-mode .register-form input {
   background-color: #bbb;
   color: #000;
+}
+
+body.light-mode nav {
+  background-color: #ccc;
+}
+
+body.light-mode .photo {
+  border-color: #000;
 }
 
 .header {
@@ -117,13 +125,17 @@ body.light-mode .register-form input {
   background-color: #006600;
 }
 
+nav {
+  background-color: #222;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
 nav ul {
   list-style: none;
   padding: 10px 0;
   text-align: center;
-  background-color: #222;
   margin: 0;
-  border-radius: 5px;
 }
 
 nav ul li {
@@ -141,14 +153,6 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
-.code {
-  background-color: #222;
-  padding: 10px;
-  border-radius: 3px;
-  font-family: monospace;
-}
-
-/* Projeler Stili */
 .projects {
   max-width: 800px;
   margin: 20px auto;
@@ -169,7 +173,6 @@ nav ul li a:hover {
   border-radius: 3px;
 }
 
-/* İletişim Stili */
 .contact {
   margin: 20px 0;
   padding: 15px;
@@ -187,7 +190,6 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
-/* Dark Toggle */
 .dark-toggle {
   position: fixed;
   top: 10px;
@@ -201,7 +203,6 @@ nav ul li a:hover {
   z-index: 1000;
 }
 
-/* Matrix */
 #matrix {
   position: fixed;
   top: 0;
@@ -231,5 +232,8 @@ nav ul li a:hover {
   nav ul li {
     display: block;
     margin: 10px 0;
+  }
+  .projects {
+    padding: 10px;
   }
 }
