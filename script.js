@@ -48,7 +48,7 @@ document.getElementById('registerForm').addEventListener('submit', function(e) {
   const username = this.querySelector('input[type="text"]').value;
   const email = this.querySelector('input[type="email"]').value;
   const password = this.querySelector('input[type="password"]').value;
-  if (!username  !email  !password) {
+  if (!username || !email || !password) {
     alert('Lütfen tüm alanları doldurun!');
   } else {
     alert(Kayıt başarılı, ${username}!);
