@@ -7,14 +7,6 @@
   <title>Benim Hack Sayfam</title>
   <link rel="stylesheet" href="style.css">
   <link rel="icon" href="images/favicon.ico">
-  <!-- Google Analytics (ID'ni buraya koy) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXXXXX');
-  </script>
 </head>
 <body>
   <!-- Matrix Canvas -->
@@ -32,55 +24,60 @@
     </ul>
   </nav>
 
-  <div class="header">
+  <header class="header">
     <h1>Merhaba Dünya!</h1>
     <p>TryHackMe Section 3 bitti, şimdi GitHub'dayım.</p>
-  </div>
+  </header>
 
   <div class="content">
     <!-- Projeler -->
-    <div class="projects">
+    <section class="projects">
       <h2>Projeler</h2>
       <ul>
         <li>TryHackMe Section 3 Tamamlandı</li>
         <li>İlk Web Sitem</li>
       </ul>
-    </div>
+    </section>
 
     <!-- Galeri -->
-    <div class="gallery">
-      <img src="foto1" alt="Foto 1" class="photo" loading="lazy">
-      <img src="foto2" alt="Foto 2" class="photo" loading="lazy">
-      <img src="box.jpg" alt="Box" class="photo" loading="lazy">
-    </div>
+    <section class="gallery">
+      <img src="images/foto1.jpg" alt="Foto 1" class="photo" loading="lazy">
+      <img src="images/foto2.jpg" alt="Foto 2" class="photo" loading="lazy">
+      <img src="images/box.jpg" alt="Box" class="photo" loading="lazy">
+    </section>
 
     <!-- İletişim -->
-    <div class="contact">
+    <section class="contact">
       <h2>İletişim</h2>
       <p>E-posta: <a href="mailto:ornek@email.com">ornek@email.com</a></p>
       <p>GitHub: <a href="https://github.com/xforce-bit">xforce-bit</a></p>
-    </div>
+    </section>
 
     <!-- Login Formu -->
-    <div class="login-form" id="login">
+    <section class="login-form" id="login">
       <h2>Giriş Yap</h2>
       <form id="loginForm">
-        <input type="text" placeholder="Kullanıcı Adı" required>
-        <input type="password" placeholder="Şifre" required>
+        <label for="username">Kullanıcı Adı</label>
+        <input type="text" id="username" placeholder="Kullanıcı Adı" required>
+        <label for="password">Şifre</label>
+        <input type="password" id="password" placeholder="Şifre" required>
         <button type="submit">Giriş</button>
       </form>
-    </div>
+    </section>
 
     <!-- Sign Up Formu -->
-    <div class="register-form" id="signup">
+    <section class="register-form" id="signup">
       <h2>Kayıt Ol</h2>
       <form id="registerForm">
-        <input type="text" placeholder="Kullanıcı Adı" required>
-        <input type="email" placeholder="E-posta" required>
-        <input type="password" placeholder="Şifre" required>
+        <label for="reg-username">Kullanıcı Adı</label>
+        <input type="text" id="reg-username" placeholder="Kullanıcı Adı" required>
+        <label for="reg-email">E-posta</label>
+        <input type="email" id="reg-email" placeholder="E-posta" required>
+        <label for="reg-password">Şifre</label>
+        <input type="password" id="reg-password" placeholder="Şifre" required>
         <button type="submit">Kayıt Ol</button>
       </form>
-    </div>
+    </section>
   </div>
 
   <script src="script.js"></script>
