@@ -1,3 +1,12 @@
+:root {
+  --primary-green: #008000;
+  --dark-bg: #333;
+  --darker-bg: #222;
+  --light-bg: #f0f0f0;
+  --input-dark: #444;
+  --input-light: #fff;
+}
+
 body {
   background-color: black;
   color: white;
@@ -8,7 +17,7 @@ body {
 }
 
 body.light-mode {
-  background-color: #f0f0f0;
+  background-color: var(--light-bg);
   color: #000;
 }
 
@@ -23,8 +32,9 @@ body.light-mode .register-form {
 
 body.light-mode .login-form input,
 body.light-mode .register-form input {
-  background-color: #bbb;
+  background-color: #eee;
   color: #000;
+  border: 1px solid #ccc;
 }
 
 body.light-mode nav {
@@ -38,7 +48,7 @@ body.light-mode .photo {
 .header {
   text-align: center;
   padding: 20px;
-  background-color: #333;
+  background-color: var(--dark-bg);
   border-radius: 5px;
 }
 
@@ -76,6 +86,7 @@ body.light-mode .photo {
   max-width: 200px;
   height: auto;
   transition: transform 0.3s;
+  will-change: transform;
 }
 
 .photo:hover {
@@ -103,7 +114,7 @@ body.light-mode .photo {
   width: 100%;
   margin: 5px 0;
   padding: 8px;
-  background-color: #444;
+  background-color: var(--input-dark);
   color: white;
   border: none;
   border-radius: 3px;
@@ -113,7 +124,7 @@ body.light-mode .photo {
 .login-form button, .register-form button {
   margin-top: 10px;
   padding: 8px 15px;
-  background-color: #008000;
+  background-color: var(--primary-green);
   color: white;
   border: none;
   border-radius: 3px;
@@ -126,7 +137,7 @@ body.light-mode .photo {
 }
 
 nav {
-  background-color: #222;
+  background-color: var(--darker-bg);
   margin-bottom: 20px;
   border-radius: 5px;
 }
@@ -144,7 +155,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #008000;
+  color: var(--primary-green);
   text-decoration: none;
   font-size: 1.1em;
 }
@@ -157,7 +168,7 @@ nav ul li a:hover {
   max-width: 800px;
   margin: 20px auto;
   padding: 20px;
-  background-color: #333;
+  background-color: var(--dark-bg);
   border-radius: 5px;
 }
 
@@ -176,13 +187,13 @@ nav ul li a:hover {
 .contact {
   margin: 20px 0;
   padding: 15px;
-  background-color: #333;
+  background-color: var(--dark-bg);
   border-radius: 5px;
   text-align: center;
 }
 
 .contact a {
-  color: #008000;
+  color: var(--primary-green);
   text-decoration: none;
 }
 
@@ -195,7 +206,7 @@ nav ul li a:hover {
   top: 10px;
   right: 10px;
   padding: 5px 10px;
-  background: #008000;
+  background: var(--primary-green);
   color: white;
   border: none;
   border-radius: 3px;
@@ -229,8 +240,12 @@ nav ul li a:hover {
   .header h1 {
     font-size: 1.5em;
   }
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   nav ul li {
-    display: block;
     margin: 10px 0;
   }
   .projects {
